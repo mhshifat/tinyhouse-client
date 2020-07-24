@@ -1,0 +1,35 @@
+import { Card, List, Skeleton } from "antd";
+import React from "react";
+
+export const HomeListingsSkeleton = () => {
+  const emptyData = [{}, {}, {}, {}];
+  return (
+    <div className="home-listings-skeleton">
+      <Skeleton paragraph={{ rows: 0 }} />
+      <List
+        grid={{
+          gutter: 8,
+          xs: 1,
+          sm: 2,
+          lg: 4,
+        }}
+        dataSource={emptyData}
+        renderItem={() => (
+          <List.Item>
+            <Card
+              loading
+              cover={
+                <div
+                  style={{
+                    backgroundImage: `url("/images/listing-loading-card-cover.jpg")`,
+                  }}
+                  className="home-listings-skeleton__card-cover-img"
+                />
+              }
+            />
+          </List.Item>
+        )}
+      />
+    </div>
+  );
+};
