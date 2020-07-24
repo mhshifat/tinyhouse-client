@@ -72,10 +72,10 @@ const Home = () => {
           locations.
         </Paragraph>
         <Link
-          to="/listings/united%20states"
+          to="/listings"
           className="ant-btn ant-btn-primary ant-btn-large home__cta-section-button"
         >
-          Popular listings in the United States
+          All listings
         </Link>
       </div>
 

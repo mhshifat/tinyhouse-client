@@ -3,7 +3,7 @@ import ApolloClient from "apollo-client";
 import { HttpLink } from "apollo-link-http";
 
 const httpLink = new HttpLink({
-  uri: "/api/v1",
+  uri: process.env.REACT_APP_API_URI + "/api/v1",
 });
 
 export const client = new ApolloClient({
